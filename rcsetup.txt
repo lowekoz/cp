@@ -1,0 +1,59 @@
+" Comments to describe what the line of code below does
+"" Actual working code for the .vimrc file but still commented.
+
+
+"använd ctrl+w,d,f mkt. Samt visual användbart v med back eller word
+"/för att söka efter ord, enter för next
+"#söka fast baklänges ifrån
+
+"set number / set nonumber
+set relativenumber
+
+colorscheme slate 
+"added blow v
+set nocompatible
+filetype plugin on
+syntax on
+
+
+:set tabstop=8    " - tabs are at proper location
+:set expandtab    " - don't use actual tab character (ctrl-v)
+:set shiftwidth=4 " - indenting is 4 spaces
+:set autoindent   " - turns it on
+:set smartindent  " - does the right thing (mostly) in programs
+:set cindent      " - stricter rules for C programs
+
+" garbage ännu fixa med export
+command Plca :r /mnt/c/Users/lowek/Documents/comp-env/LowestCommonAncestor.cpp
+command Ptemp :r /mnt/c/Users/lowek/Documents/comp-env/template.cpp
+command Psufarr :r /mnt/c/Users/lowek/Documents/comp-env/SuffixArr.cpp
+command Puf :r /mnt/c/Users/lowek/Documents/comp-env/UF.cpp
+command Pgen :r /mnt/c/Users/lowek/Documents/comp-env/gen.cpp
+command Pscript :r /mnt/c/Users/lowek/Documents/comp-env/script.sh
+command Pincseq :r /mnt/c/Users/lowek/Documents/comp-env/LongestIncSubSeq.cpp
+command Pprime :r /mnt/c/Users/lowek/Documents/comp-env/PrimeSieve.cpp
+command Pic :r /mnt/c/Users/lowek/Documents/comp-env/IntervalCover.cpp
+command Pedist :r /mnt/c/Users/lowek/Documents/comp-env/EuclideanDist.cpp
+command Pmxflow :r /mnt/c/Users/lowek/Documents/comp-env/FordFulkerson.cpp
+command Pdijk :r /mnt/c/Users/lowek/Documents/comp-env/LazyDijkstra.cpp
+
+hi MatchParen cterm=underline ctermbg=none ctermfg=magenta
+
+"{ kommer vänta en sec innan } addas automatiskt
+inoremap { {}<left>
+inoremap {<CR> {<CR><CR>}<up><C-F>
+inoremap {;<CR> {<CR><CR>};<up><C-F>
+inoremap <C-L> <Esc><S-A><CR>
+inoremap LL <Esc><S-A>
+inoremap SS <Esc>^i
+inoremap <C-I> <up><Esc><S-A>
+inoremap II <down><Esc><S-A>
+
+
+"^ first noneblank char while 0 beginning of line
+"CTRL D OCH F DAT GOOD INDENTATION
+
+""map! fungerar till insert och commandline mode :
+map! <F2> :echo 'Hello there'<CR>
+""map fungerar till normal mode
+
