@@ -32,6 +32,7 @@ template<class T> using pq = priority_queue<T>;
 
 const double PI = 3.141592653589793238460;
 const int MOD = (int)1e9 + 7;
+const char nl = '\n';
 
 // I/O
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream& os, const T_container& v) { os << '{'; string sep; for (const T& x : v) os << sep << x, sep = ", "; return os << '}'; }
@@ -44,6 +45,9 @@ void u(vector<T>& inp_dst){
         cin >> el;
     }
 }
+
+
+
 
 void run_case(){
 
