@@ -16,7 +16,7 @@ typedef vector<pi> vpi;
 typedef vector<pl> vpl;
 
 #define rep(i,a,b) for (int i = a; i < b; ++i)
-#define repr(i,a,b) for (int i = a; i >= b; --i)
+#define repr(i,a,b) for (int i = a; i > b; --i)
 #define sz(x) (int)x.size()
 #define trav(a, x) for (auto & a : x)
 #define all(x) x.begin(), x.end()
